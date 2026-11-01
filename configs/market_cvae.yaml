@@ -1,0 +1,45 @@
+data_index: data/market/index.p
+match_path: data/market/matches.json
+checkpoint: null
+batch_size: 4
+init_batches: 4
+spatial_size: 128
+box_factor: 1
+bottleneck_factor: 1
+num_identities: null
+lr: 0.001
+lr_decay_begin: 500
+lr_decay_end: 100000
+log_freq: 1000
+ckpt_freq: 5000
+drop_prob: 0.1
+vgg_weights: imagenet
+feature_layers:
+- input_1
+- block1_conv2
+- block2_conv2
+- block3_conv2
+- block4_conv2
+- block5_conv2
+feature_weights:
+- 1.0
+- 1.0
+- 1.0
+- 1.0
+- 1.0
+- 1.0
+gram_weights:
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+identity_weight: 0.0
+cycle_training: false
+cycle_weight: 1.0
+cycle_alpha: 0.5
+cycle_lr_scale: 0.1
+alpha: 0.5
+identities_per_batch: 27
+identity_offset: 1500
